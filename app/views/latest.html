@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Office for National Statistics
+{% endblock %}
+
+{% block content %}
+  <a href="/" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">    
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find the latest statistics
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>{{releaseVersion | log }}
+
+      <h2 class="govuk-heading-m">Filter by keyword</h2>
+
+      <div class="govuk-form-group">
+        <!-- <label class="govuk-label" for="name">
+          Search by topic, area
+        </label> -->
+        <!-- <span id="national-insurance-number-hint" class="govuk-hint">
+          You can search for datasets, analysis, surveys, locations or dates.
+        </span> -->
+        <input class="govuk-input" id="name" name="name" type="text">
+      </div>
+      <!-- <div class="govuk-form-group">
+        <button type="submit" class="govuk-button">
+          Filter
+        </button>
+      </div> -->
+
+      <!-- <h2 class="govuk-heading-m">Next releases</h2> -->
+
+      <h2 class="govuk-heading-m">Recently published</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+            <a href="/statistics/uk-economic-accounts">UK economic accounts</a>
+            <span class="govuk-hint">
+                2 hours ago
+            </span>
+        </li>
+        <li>
+            <a href="/statistics/uk-public-sector-finances">UK public sector finances</a>
+            <span class="govuk-hint">
+                2 hours ago
+            </span>
+        </li>
+        <li>
+            <a href="/statistics/baby-names-in-england-and-wales">Baby names in England and Wales</a>
+            <span class="govuk-hint">
+                Yesterday at 9:30am
+            </span>
+        </li>
+        <li>
+            <a href="/statistics/retail-sales-great-britain">Retail sales, Great Britain</a>
+            <span class="govuk-hint">
+                Friday 21st September at 9:30am
+            </span>
+        </li>
+        <li>
+            <a href="/statistics/consumer-price-inflation-uk">Consumer price inflation, UK</a>
+            <span class="govuk-hint">
+                Friday 21st September at 9:30am
+            </span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Upcoming releases</h2>
+        <p>
+            These are due for release today at 9:30am.
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/statistics/uk-productivity">UK productivity</a></li>
+            <li><a href="/statistics/economic-well-being">Economic well-being</a></li>
+            <li><a href="/statistics/uk-index-of-production">UK index of production</a></li>
+            <li><a href="/statistics/uk-trade">UK trade</a></li>
+        </ul>
+
+        <p>
+            <a href="/release-calendar">Open the full release calendar</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}
